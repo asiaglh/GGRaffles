@@ -1,0 +1,408 @@
+.general__block{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  max-height: 900px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+  @include laptop{
+    max-height: 700px;
+    margin-bottom: 50px;
+  }
+  @include mobileL{
+    margin-top: 50px;
+  }
+  .triangle__bg{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      min-width: 1920px;
+      width: 100%;
+      height: 100%;
+      @include mobileL{
+        max-height: 650px;
+        object-fit: contain;
+      }
+    }
+  }
+  .left__bg{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 86%);
+    position: absolute;
+    left:0;
+    top: 0;
+    height: auto;
+    overflow: hidden;
+    @include laptop{
+      width: 40%;
+      height: auto;
+    }
+    @include tabletL{
+      width: 50%;
+      margin-top: 100px;
+    }
+    @include tablet{
+      width: 60%;
+    }
+    @include mobileL{
+      margin-top: 120px;
+      clip-path: none;
+      width: 250px;
+    }
+    .left__bg1{
+      width: 100%;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      mix-blend-mode: normal;
+      object-fit: contain;
+    }
+    .left__bg2{
+      width: 100%;
+      top: 0;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: normal;
+
+    }
+    .left__bg-lights{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      mix-blend-mode: screen;
+      object-fit: cover;
+    }
+    .left__bg-blur{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      mix-blend-mode: screen;
+      object-fit: contain;
+    }
+    &:after{
+      content: "";
+      background: linear-gradient(90deg, #7600BF 0%, rgba(28, 65, 108, 0) 100.06%);
+      transform: rotate(8.2deg);
+      height: 7px;
+      z-index: 15;
+      left: -5px;
+      width: 40vw;
+      top: 738px;
+      position: absolute;
+      @include laptop{
+        top: auto;
+        bottom: 45px;
+      }
+      @include mobileL{
+       display: none;
+      }
+    }
+  }
+
+  .general__title{
+    z-index: 3;
+    top: 0;
+    margin-top: 200px;
+    max-width: 650px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    h1.h1__title{
+      @include mobileL {
+        max-width: 285px;
+      }
+    }
+    @include laptop{
+      margin-top: 100px;
+    }
+    @include tabletL{
+      max-width: 500px;
+    }
+    @include mobileL{
+      margin-top: 60px;
+    }
+    .h3__title{
+      margin-top: 50px;
+      @include tabletL{
+        margin-top: 150px;
+      }
+      @include tablet{
+        margin-top: 220px;
+      }
+    }
+      .general__title-btn {
+        margin: 160px auto;
+        position: relative;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 620px;
+        height: 100px;
+        @include laptop{
+          width: 540px;
+          height: 80px;
+          margin: 100px auto;
+        }
+        @include tabletL{
+          margin: 50px auto;
+          width: 100%;
+        }
+        @include tablet{
+          max-width: 355px;
+          height: 60px;
+        }
+        @include mobileL{
+          margin: 30px auto 0;
+        }
+        span{
+          font-family: 'Oxanium';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 46px;
+          line-height: 46px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          @include tablet{
+            font-size: 20px;
+            line-height: 26px;
+          }
+        }
+        svg{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          transition: 1s;
+        }
+        .svg-hover{
+          opacity: 0.3;
+        }
+        &:hover{
+          svg{
+            opacity: 0;
+          }
+          .svg-hover{
+            opacity: 1;
+          }
+        }
+      }
+  }
+  .general__light{
+    background: linear-gradient(180deg, #40A0FF 0%, #AD02C0 96.47%);
+    filter: blur(250px);
+    max-width: 470px;
+    width: 100%;
+    height: 470px;
+    position: absolute;
+    bottom:0;
+    @include tablet{
+      bottom: 50px;
+     max-width: 230px;
+      height: 230px;
+      filter: blur(125px);
+    }
+  }
+ .right__bg{
+   overflow: hidden;
+   clip-path: polygon(0 0, 100% 0%, 100% 86%, 0 100%);
+   position: absolute;
+   right:0;
+   top: 0;
+   height: 800px;
+   @include laptop{
+     width: 40%;
+     height: auto;
+     clip-path: polygon(0 0, 100% 0%, 100% 86%, 0 100%);
+   }
+   @include tabletL{
+     width: 50%;
+     margin-top: 100px;
+   }
+   @include tablet{
+     width: 60%;
+   }
+   @include mobileL{
+     margin-top: 120px;
+     clip-path: none;
+     width: 250px;
+   }
+
+   .right__bg1{
+     position: absolute;
+     z-index: 2;
+     mix-blend-mode: normal;
+     height: 100%;
+
+   }
+   .right__bg2{
+     mix-blend-mode: normal;
+   }
+   .right__bg-lights{
+     position: absolute;
+     top: 0;
+     mix-blend-mode: screen;
+     height: 100%;
+   }
+   .right__bg-blur{
+     position: absolute;
+     z-index: 3;
+     top: 0;
+     mix-blend-mode: screen;
+     height: 100%;
+   }
+   &:after{
+     content: "";
+     background: linear-gradient(90deg, rgba(28, 65, 108, 0) 0%, #7600BF 100.06%);
+     transform: rotate(-8.2deg);
+     height: 7px;
+     position: absolute;
+     z-index: 10;
+     right: -5px;
+     width: 40vw;
+     top: 738px;
+     @include laptop{
+       top: auto;
+       bottom: 45px;
+     }
+     @include mobileL{
+       display: none;
+     }
+   }
+ }
+}
+.gradient-mobile{
+  display: none;
+  @include mobileL{
+    display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: 70px;
+  background: linear-gradient(to top, rgba(11, 10, 32, 0) 14.27%, #1d1b56 49.91%, rgba(11, 10, 32, 0) 84.27%);
+  height: 300px;
+  z-index: 3;
+  }
+}
+.newsletter__block{
+  margin: 0 auto 200px;
+  width: 100%;
+  position: relative;
+  max-width: 1320px;
+  height: 470px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  border: 2px solid;
+  border-radius: 50px;
+  border-image: var(--border-2);
+  @include tablet{
+    border-radius: 20px;
+  }
+ @include mobileL{
+   margin: 0 auto 100px;
+ }
+  .title__2{
+    padding: 40px 0 0 0;
+    margin: 0 0 30px;
+    @include mobileL{
+      svg{
+        display: none;
+      }
+      padding: 0;
+      max-width: 250px;
+      text-align: center;
+    }
+
+  }
+
+  .h3__title{
+    @include mobileL{
+      max-width: 200px;
+    }
+  }
+  &-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      mix-blend-mode: lighten;
+      object-fit: cover;
+      @include tablet{
+        border-radius: 20px;
+      }
+    }
+  }
+
+.newsletter__shadow{
+  position: absolute;
+  bottom: -50px;
+  height: 137px;
+  width: 691px;
+  background: #0B0A20;
+  filter: blur(50px);
+  @include tablet{
+    width: 70%;
+  }
+}
+.newsletter-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: -50px;
+  height: 170px;
+  max-width: 470px;
+  width: 100%;
+  @include tablet{
+    max-width: 400px;
+  }
+  @include mobileL{
+    max-width: 300px;
+  }
+  @include mobileL{
+    bottom: -70px;
+  }
+  .main__btn{
+    bottom: 0;
+    width: 100%;
+  }
+  .input-wrapper{
+    width: 100%;
+  }
+ }
+}
+
+.dontMiss__block{
+  position: relative;
+  width: 100%;
+  .dontMiss__products{
+    display: block;
+    height: 600px;
+    margin-bottom: 100px;
+    @include tabletL{
+      margin-bottom: 0;
+    }
+    @include mobileL{
+      margin: 0 0 0 10px;
+    }
+  }
+}
+

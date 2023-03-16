@@ -1,0 +1,52 @@
+.rust__block{
+  margin-top: -250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: 100%;
+  height: auto;
+
+  .rust__background {
+    background: linear-gradient(180deg, rgba(16, 15, 56, 0) 16.77%, #100F38 42.46%, rgba(16, 15, 56, 0) 71.63%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    .rust__bg{
+      border: 1px solid;
+      border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 24.48%, #CAFFF5 50.71%, rgba(255, 255, 255, 0) 78.13%) 1;
+      img {
+        mix-blend-mode: color-dodge;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .rust__bg.left{
+      img {
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+    }
+    .rust__bg.right{
+      img {
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+    }
+  }
+  .rust__products{
+    z-index: 5;
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px;
+  }
+  .showAll__btn{
+    position: absolute;
+    bottom: -30px;
+  }
+}

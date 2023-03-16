@@ -1,0 +1,93 @@
+.accordion{
+  width: 100%;
+  height: auto;
+  @include tabletL{
+   padding: 0 70px;
+  }
+  @include mobileL{
+    padding: 0 10px;
+  }
+}
+
+.accordion__item {
+  margin: 0 auto 20px;
+  max-width: 1320px;
+  width: 100%;
+
+}
+.accordion__item .accordion__title {
+  border: 1.5px solid;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0)  24.48%, #CAFFF5  50.71%, rgba(255, 255, 255, 0)  78.13%) 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 2px;
+  background: linear-gradient(270deg, #456ADF 0%, #3881D6 49.79%, #456ADF 100%);
+  border-radius: 5px;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  width: 100%;
+  @include mobileL{
+    padding: 20px 15px;
+  }
+}
+
+.accordion__title-text{
+    font-family: 'Oxanium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    color: #FFFFFF;
+  @include mobileL{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    margin: 0 10px;
+  }
+}
+.accordion__item .accordion__title:hover {
+  transition: all 0.5s ease-out;
+}
+.accordion__item .accordion-active {
+
+}
+.accordion__item .accordion__title .accordion__arrow {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.accordion__item .accordion__rotate {
+  transform: rotate(225deg);
+  margin: -5px 0 0 0;
+}
+.accordion__item .accordion__content {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 20px 25px;
+  margin-bottom: 2px;
+  display: none;
+  background-color: var(--db-3);
+}
+.accordion__item .accordion__arrow-item {
+  font-weight: 700;
+}
+
+
+.faq__content{
+  margin-bottom: 100px;
+  margin-top: 80px;
+  @include mobileL{
+    margin: 20px 0 50px;
+  }
+}

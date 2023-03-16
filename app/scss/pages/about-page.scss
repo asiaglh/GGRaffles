@@ -1,0 +1,298 @@
+.about__body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  @include tabletL{
+    padding: 0 70px;
+  }
+  @include mobileL{
+    padding: 0 10px;
+  }
+  margin-bottom: 250px;
+  @include tablet{
+     margin-bottom: 150px;
+  }
+  @include mobileL{
+    margin-bottom: 100px;
+  }
+  .about-item{
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      position: absolute;
+      bottom: -150px;
+      @include tablet{
+        width: 700px;
+        object-fit: cover;
+        bottom: -90px;
+      }
+      @include mobileL{
+        bottom: -60px;
+      }
+      &.small{
+        bottom: -100px;
+         @include tablet{
+           bottom: -40px;
+         }
+      }
+    }
+    .about-title{
+      width: 100%;
+      margin: 70px 0 40px;
+      @include mobileL{
+        margin: 50px 0 30px;
+      }
+      &.left{
+        .h1__title {
+          text-align: left;
+          @include mobileL{
+            text-align: center;
+          }
+        }
+      }
+      &.right{
+        .h1__title{
+          text-align: right;
+          @include mobileL{
+            text-align: center;
+          }
+        }
+      }
+    }
+    .about-item-bg{
+      padding: 50px 115px 120px;
+      @include tablet{
+        padding: 20px 20px 50px;
+        border-radius: 30px;
+      }
+      opacity: 0.85;
+      border-radius: 50px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1.5px solid;
+      border-bottom: 1px solid;
+      border-image: var(--border-2);
+      .p2__text{
+        z-index: 3;
+        opacity: 1;
+        @include tablet{
+          font-family: 'Mulish';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          color: #FFFFFF;
+        }
+      }
+      &:before{
+        z-index: -5;
+        position: absolute;
+        content: "";
+        width: 80%;
+        height: 100%;
+        background: linear-gradient(180deg, #40A0FF 0%, #AD02C0 96.47%);
+        opacity: 0.6;
+        top: -40%;
+        filter: blur(100px);
+      }
+    }
+  }
+
+}
+
+
+
+.features-list{
+  margin-top: -100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 200px;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, rgba(108, 85, 254, 0)  0%, #6C55FE  50.71%, rgba(108, 85, 254, 0) 100%) 1;
+  @include tabletL{
+    flex-direction: column;
+  }
+  @include mobileL{
+    padding: 0 10px;
+  }
+  .features-item{
+    overflow: hidden;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, rgba(108, 85, 254, 0)  0%, #6C55FE  50.71%, rgba(108, 85, 254, 0) 100%) 1;
+    width: 426px;
+    height: 300px;
+    background: #100F38;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    position: relative;
+    z-index: 4;
+    @include tabletL{
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    @include mobileL{
+      width: 100%;
+    }
+    .features-item-light{
+      top: 0;
+      background: linear-gradient(180deg, #40A0FF 0%, #AD02C0 96.47%);
+      opacity: 0.5;
+      filter: blur(100px);
+      width: 260px;
+      height: 260px;
+      position: absolute;
+      z-index: 1;
+    }
+    .features-item-bg{
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: color-dodge;
+      border-radius: 20px;
+    }
+    .features-item__content{
+      margin: 60px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .p3__text{
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+  }
+  .features-item:last-child{
+    margin-right: 0;
+  }
+}
+
+.contact__block{
+  border: 2px solid;
+  border-image: linear-gradient(90deg, rgba(108, 85, 254, 0)  0%, #6C55FE  50.71%, rgba(108, 85, 254, 0) 100%) 1;
+  margin: 0 auto 200px;
+  width: 100%;
+  position: relative;
+  max-width: 1320px;
+  height: 690px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #100F38;
+  border-radius: 50px;
+  @include tablet{
+    border-radius: 20px;
+    max-height: 630px;
+  }
+
+  .title__2{
+    padding: 40px 0 0 0;
+    margin: 0 0 30px;
+    @include mobileL{
+      svg{
+        display: none;
+      }
+      .h1__title.white{
+        padding-top: 30px;
+      }
+    }
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    mix-blend-mode: screen;
+    object-fit: cover;
+    opacity: 0.5;
+    @include tablet{
+      border-radius: 20px;
+    }
+  }
+  .contact__shadow{
+    position: absolute;
+    bottom: -50px;
+    height: 137px;
+    width: 691px;
+    background: #0B0A20;
+    filter: blur(50px);
+    @include tablet{
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+    @include tablet{
+      max-width: 400px;
+    }
+    @include mobileL{
+      padding: 0 10px;
+      bottom: -30px;
+    }
+    .main__btn{
+      bottom: 0;
+      width: 100%;
+    }
+    .input-wrapper.contact-textarea{
+      min-height: 240px;
+    }
+  }
+}
+
+.main__textarea-item{
+  background: transparent;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 200px;
+  position: absolute;
+  top: 40%;
+  outline: none;
+  border: none;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  color: #429EF9;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include mobileL{
+    font-size: 20px;
+    line-height: 26px;
+  }
+  &::placeholder{
+    color: #429EF9;
+  }
+
+}

@@ -1,0 +1,73 @@
+$k2: 2560px;
+$desktop: 1921px;
+$laptopL: 1681px;
+$tabletM: 1200px;
+$tabletL: 1024px;
+$tablet: 768px;
+$tabletS: 625px;
+$mobileL: 530px;
+$mobileM: 414px;
+$mobileS: 360px;
+
+@mixin mobileL{
+  @media (max-width: $mobileL){
+    @content
+  }
+}
+
+
+@mixin mobile{
+  @media (max-width: $tabletS){
+    @content
+  }
+}
+
+@mixin tabletL{
+  @media (max-width: $tabletL){
+    @content
+  }
+}
+
+@mixin tabletM{
+  @media (max-width: $tabletM){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content
+  }
+}
+
+@mixin tabletS{
+  @media (max-width: $tabletS){
+    @content
+  }
+}
+
+@mixin laptop{
+  @media (max-width: $laptopL){
+    @content
+  }
+}
+
+// colors
+:root{
+  --border-1: linear-gradient(90deg, rgba(255, 255, 255, 0)  0%, #CAE2FF  50.71%, rgba(255, 255, 255, 0)  100%) 1;
+  --db-1:#0B0A20;
+  --db-3:#141345;
+  --db-2:#100F38;
+  --yellow:#F8B83C;
+  --border-2:linear-gradient(90deg, rgba(108, 85, 254, 0)  0%, #6C55FE 50.71%, rgba(108, 85, 254, 0)  100%) 1;
+  border-radius: 10px;
+  --blue-1:#429EF9;
+  --blue-2:#417DD7;
+  --transition: .35s;
+  --grey2: #898989;
+  --purple-1: #E00D72;
+  --violet-3:#6C55FE;
+  --violet-2:#372370;
+  --cardBg: linear-gradient(180deg, #5d299d 0%, #1f1446 100%);
+  --green:#13AB59;
+}

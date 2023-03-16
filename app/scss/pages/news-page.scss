@@ -1,0 +1,394 @@
+.news__content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -150px;
+  max-width: 1320px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid;
+  border-image: var(--border-2);
+  background: var(--db-3);
+  z-index: 0;
+  .news__content-img{
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    border: 2px solid;
+    border-image: var(--border-2);
+    margin-bottom: 20px;
+    @include mobileL{
+      height: 160px;
+    }
+  }
+  .news__content-title{
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    .h3__title{
+      text-align: left;
+    }
+    .hashtag-list{
+      margin: 25px 0;
+      @include mobileL{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      }
+    }
+    @include mobileL{
+      padding: 0 10px 10px;
+    }
+  }
+  .content{
+    p {
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+      padding: 20px 40px;
+      @include mobileL{
+        padding: 10px;
+      }
+    }
+    img{
+      width: 100%;
+      height: 325px;
+      object-fit: cover;
+      border: 2px solid;
+      border-image: var(--border-2);
+      margin-bottom: 20px;
+      @include mobileL{
+        height: 160px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.news-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 40px;
+  .main__textarea-item{
+    position: relative;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 20px;
+    top: 0px;
+    &::placeholder{
+      line-height: 200px;
+    }
+  }
+
+  .news-form-nav{
+    margin-top: -50px;
+    display: flex;
+    @include tablet{
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mobileL{
+      justify-content: center;
+      width: 100%;
+      max-width: 300px;
+      margin-top: -40px;
+    }
+    .main__btn{
+      width: 355px;
+      height: 60px;
+      margin-left: 10px;
+      background: linear-gradient(90deg, #6331F0 18.83%, #238ECB 51.04%, #6331F0 83.45%);
+      border-radius: 5px;
+      &:hover{
+        background: linear-gradient(90deg, #296BCF 0%, #238ECB 49.67%, #296BCF 100%);
+      }
+      @include tablet{
+        margin-top: 10px;
+        margin-left: 0;
+
+      }
+      @include mobileL{
+        width: 100%;
+      }
+    }
+    .news-form-mail{
+      position: relative;
+      width: 300px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tablet{
+        width: 355px;
+      }
+      @include mobileL{
+        width: 100%;
+      }
+      &:hover{
+        svg{
+          rect{
+            fill: var(--db-2);
+          }
+        }
+      }
+      svg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .form-mail{
+        z-index: 3;
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #429EF9;
+        width: 100%;
+        background: transparent;
+        height: 100%;
+        border: none;
+        outline: none;
+        text-align: center;
+        &::placeholder{
+          color: #429EF9;
+        }
+      }
+    }
+  }
+}
+
+.news-comments{
+  position: relative;
+  padding-bottom: 100px;
+  @include mobileL{
+    padding-bottom: 50px;
+  }
+  .btn-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .main__btn{
+      position: absolute;
+    }
+    .btn-shadow{
+      bottom: -40px;
+      position: absolute;
+      width: 619px;
+      height: 80px;
+      background: #0B0A20;
+      filter: blur(25px);
+      @include tablet{
+        width: 70%;
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+.news-comments-list{
+  padding: 0 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  @include mobileL{
+    padding: 0 10px;
+  }
+  .news-comment-wrap{
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .news-comment{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .comment-date{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--blue-1);
+      @include mobileL{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+        font-size: 16px;
+      }
+      span{
+        margin-right: 20px;
+      }
+    }
+    .comment-rating{
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      span{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--yellow);
+        margin-left: 7px;
+      }
+      .comment-like{
+        display: flex;
+        margin-right: 25px;
+      }
+      .comment-dislike{
+        display: flex;
+        span{
+          color: #FFFFFF;
+        }
+      }
+    }
+    &::after{
+      position: absolute;
+      top: -2px; bottom: -2px;
+      left: -2px; right: -2px;
+      background: linear-gradient(90deg, #6C55FE 0%, rgba(108, 85, 254, 0.5) 15.1%, rgba(108, 85, 254, 0)  49.48%, rgba(108, 85, 254, 0.5)  83.85%, #6C55FE  100%);
+      content: '';
+      border-radius: 5px;
+      z-index: -1;
+    }
+    &::before{
+      bottom: -30%;
+      position: absolute;
+      content: '';
+      background: linear-gradient(180deg, #40A0FF 0%, #AD02C0 96.47%);
+      opacity: 0.25;
+      filter: blur(100px);
+      z-index: 1;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    background: var(--db-3);
+    border-radius: 5px;
+    padding: 30px 30px 60px;
+    @include mobileL{
+      padding: 20px 20px 50px;
+    }
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    .comment-mail{
+      font-family: 'Oxanium';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      color: #429EF9;
+      text-align: left;
+      width: 100%;
+      @include mobileL{
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+    .news__content-text{
+       padding: 10px 0;
+    }
+  }
+}
+
+.news__content-text{
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 20px 40px;
+}
+.news__content-data{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assets{
+  display: flex;
+  .assets-likes{
+    display: flex;
+    margin-right: 10px;
+  }
+}
+
+.assets-form{
+  padding: 0 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mobileL{
+    padding: 20px 10px 10px;
+  }
+}
+
+.society{
+  display: flex;
+  align-items: center;
+  .society-item{
+    margin: 0 0 0 20px;
+  }
+}
+
+.news__body{
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg,rgba(108, 85, 254, 0)  0%, #6C55FE  50.71%, rgba(108, 85, 254, 0)  100%) 1;
+  top: 20px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  background: linear-gradient(180deg, #100F38 0%, #0B0A20 100%);
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+  @include mobileL{
+    margin-bottom: 100px;
+  }
+}
+
+.news-comment.hidden{
+  display: none;
+}

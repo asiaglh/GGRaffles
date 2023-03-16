@@ -1,0 +1,296 @@
+
+
+.header{
+  &.myAccount{
+    .header__btn-list{
+      display: flex;
+    }
+    .header__btn{
+      display: none;
+    }
+    .header__btn.myAccount-btn{
+      display: flex;
+      width: 80px;
+      @include mobileL{
+        width: 55px;
+      }
+      svg{
+        width: 50%;
+        height: auto;
+      }
+    }
+    .header__btn-list.mob{
+      display: none;
+    }
+  }
+  .header__logo{
+    @include mobileL{
+      width: 140px;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .header__burger{
+    display: none;
+    @include tabletM{
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+    }
+    z-index: 5;
+  }
+  @include tabletM{
+    .header__burger:before,
+    .header__burger:after {
+      content: '';
+      background: white;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+    .header:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: 3;
+    }
+    .header__burger:before {
+      top: 0;
+      height: 2.4px;
+    }
+    .header__burger:after {
+      height: 2.4px;
+      bottom: 0;
+      @include mobileL{
+        bottom: 1px;
+      }
+    }
+    .header__burger span {
+      position: absolute;
+      background: white;
+      left: 0;
+      width: 100%;
+      height: 2.4px;
+      top: 8.4px;
+      transition: all 0.3s ease 0s;
+    }
+
+  }
+   &__body{
+     background: var(--db-1);
+     position: fixed;
+     width: 100%;
+     top: 0;
+     z-index: 20;
+     border-bottom: 2px solid #8A77FF;
+
+     padding: 25px 100px;
+     &-wrapper{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+     }
+     @include laptop{
+       padding: 25px 40px;
+     }
+     @include mobileL{
+       padding: 20px;
+     }
+     .header__nav{
+       @include tabletM{
+         display: none;
+       }
+     }
+   }
+}
+.header__btn-list{
+  @include mobileL{
+    display: none;
+  }
+  .header__btn.myAccount-btn{
+    display: none;
+  }
+  &.mob{
+    display: none;
+    @include mobileL{
+      margin-top: 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  display: flex;
+  .header__btn {
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, #6331F0 18.83%, #238ECB 51.04%, #6331F0 83.45%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    position: relative;
+    height: 50px;
+    margin-right: 10px;
+    border-top: 1.5px solid;
+    border-bottom: 1.5px solid;
+    border-image: linear-gradient(90deg, rgba(255,255,255,0) 24.48%, #CAFFF5 50.71%, rgba(255,255,255,0) 78.13%) 1;
+    transition: background-image 3s;
+    @include mobileL{
+      width: 100%;
+      height: 35px;
+    }
+    &:hover{
+      background-image: linear-gradient(90deg, #296BCF 0%, #238ECB 49.67%, #296BCF 100%);
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    .quantity{
+      &.active{
+        display: block;
+      }
+      span{
+        @include mobileL {
+          margin-top: -2px;
+          font-size: 12px;
+          line-height: 0;
+        }
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      top: 1px;
+      right: -7px;
+      position: absolute;
+      padding: 5px 10px 2px;
+      @include mobileL{
+        padding: 0 10px 2px;
+      }
+      background: var(--purple-1);
+      border-radius: 3px;
+      border-top: 0.5px solid;
+      border-bottom: 0.5px solid;
+      border-image: linear-gradient(90deg, rgba(255,255,255,0) 24.48%, #CAFFF5 50.71%, rgba(255,255,255,0) 78.13%) 1;
+    }
+    span{
+      font-family: 'Oxanium';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      @include mobileL{
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.header__nav-item{
+  color: #FFFFFF;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 30px;
+  padding:0 5px 5px;
+  transition: 0.15s;
+  @include laptop{
+    margin-right: 20px;
+  }
+  @include tabletM{
+    margin: 0 0 50px;
+  }
+  @include mobileL{
+    margin: 0 0 30px;
+  }
+  &:hover {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #40A0FF -3.75%, #AD02C0 101.03%) 1;
+  }
+  &:last-child {
+  margin-right: 0;
+ }
+}
+
+.header-burgerMenu{
+  display: none;
+  top: -100%;
+  transition: .35s;
+}
+
+.header.active {
+  .header__body{
+    border-left: 5px solid;
+    border-color: var(--violet-3);
+    &-wrapper{
+      justify-content: flex-end;
+    }
+    background: var(--db-2);
+    height: 110px;
+    .header__logo {
+      display: none;
+    }
+
+    .header__btn-list {
+      display: none;
+    }
+  }
+
+  .header__burger span {
+    transform: scale(0);
+  }
+  .header__burger:before {
+    transform: rotate(45deg);
+    top: 8.6px;
+  }
+  .header__burger:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header-burgerMenu{
+    top: 100px;
+  }
+
+}
+
+.header-burgerMenu{
+  transition: 0.2s;
+  top: -100vh;
+  overflow: auto;
+  position: fixed;
+  width: 101vw;
+  height: 100vh;
+  background: var(--db-2);
+  color: #FFFFFF;
+  z-index: 100;
+  padding: 50px 50px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: normal;
+  border-left: 5px solid;
+  border-color: var(--violet-3);
+  @include mobileL{
+    padding: 20px 20px 100px;
+  }
+}
+
+

@@ -1,0 +1,338 @@
+.block__type2-body{
+  .block__type1-products{
+    margin-top: 0px;
+    margin-bottom: 200px;
+  }
+}
+
+.cart{
+  margin: 100px 0 150px;
+  padding: 50px 30px;
+  height: auto;
+  width: 100%;
+  background-color: var(--db-2);
+  border-radius: 50px;
+  border-top: 1.5px solid;
+  border-bottom: 1.5px solid;
+  border-image:var(--border-2) ;
+  @include tablet{
+    margin: 50px 0 100px;
+    border-radius: 20px;
+    padding: 30px 10px;
+  }
+  @include mobileL{
+    margin: 20px 0 50px;
+  }
+}
+
+.cart-info{
+  display: flex;
+  max-width: 1320px;
+  width: 100%;
+  margin: 50px auto;
+  justify-content: space-between;
+  @include tablet{
+    flex-direction: column-reverse;
+    max-width: 520px;
+  }
+  @include mobileL{
+    margin: 30px auto;
+  }
+  .cart-checkBox-wrap{
+    margin-right: 20px;
+    position: relative;
+    width: 55%;
+    @include tablet{
+      width: 100%;
+      margin-right: 0;
+    }
+    svg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .cart-checkBox{
+    padding: 50px;
+    .p2__text{
+      text-align: center;
+    }
+    .checkBox-body{
+
+      input{
+        width: 35px;
+        height: 35px;
+        opacity: 0;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+    .p2__text{
+      margin-bottom: 20px;
+    }
+    .checkBox-item{
+     display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      position: relative;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      label{
+        text-align: left;
+      }
+      svg{
+        width: 30px;
+        height: 30px;
+      }
+      .svg-inactive{
+        opacity: 0;
+      }
+      .svg-checked{
+        opacity: 0;
+        position: absolute;
+        left: 5px;
+        width: 20px;
+        height: 20px;
+        transition: 0.35s;
+      }
+      &.checked{
+        .svg-checked{
+          opacity: 1;
+        }
+      }
+      &.unchecked{
+        .svg-checked{
+          opacity: 0;
+        }
+      }
+      &.inactive{
+        label{
+          color: rgba(66, 158, 249, 0.5);
+        }
+        .svg-checked, .svg-unchecked{
+          opacity: 0;
+        }
+        .svg-inactive{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .cart-totalPrice{
+    .totalPay{
+      width: 100%;
+      height: calc(100% - 90px);
+      margin-bottom: 10px;
+      background: var(--cardBg);
+      border-radius: 5px;
+      display: flex;
+      padding: 50px;
+      align-items: center;
+      flex-direction: column;
+      .p2__text{
+        text-transform: uppercase;
+      }
+      .h4__title{
+        font-family: 'Oxanium';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 52px;
+        color: var(--yellow);
+        margin-top: 60px;
+        span{
+          font-family: 'Oxanium';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 52px;
+          line-height: 52px;
+        }
+      }
+    }
+  }
+}
+.btn-TotalPay{
+  @include tablet{
+    display: none;
+  }
+  &.mob{
+    width: 100%;
+    min-width: auto;
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 38px;
+    display: none;
+    @include tablet{
+      display: flex;
+    }
+  }
+  width: 100%;
+  min-width: 570px;
+  @include tabletL{
+    min-width: 430px;
+  }
+  height: 80px;
+  font-family: 'Oxanium';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #6331F0 18.83%, #238ECB 51.04%, #6331F0 83.45%);
+  border-radius: 5px;
+  border-top: 1.5px solid;
+  border-bottom: 1.5px solid;
+  border-image: var(--border-1);
+  &:hover{
+    background: linear-gradient(90deg, #296BCF 0%, #238ECB 49.67%, #296BCF 100%);
+  }
+}
+.shopping-list{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include tablet{
+    margin-top: 0px;
+  }
+  .shopping-item{
+    z-index: 3;
+    max-width: 1320px;
+    width: 100%;
+    display: flex;
+    background: var(--cardBg);
+    padding: 30px 40px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+   @include mobileL{
+     padding: 30px 20px;
+   }
+    @include tablet{
+      flex-direction: column;
+      max-width: 520px;
+    }
+    &-img{
+      min-width: 275px;
+      width: 275px;
+      height: 200px;
+      position: relative;
+      background: linear-gradient(45deg, #B83EF3 0%, #47CCF8 100%);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 30px;
+      @include mobileL{
+        margin-right: 0;
+        width: 100%;
+        height: 270px;
+      }
+      img{
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .product__card{
+        width: 80%;
+      }
+    }
+    &-info{
+      @include tablet{
+        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-right: 0;
+      }
+      width: 100%;
+      margin-right: 30px;
+      .shopping-item-price{
+        display: flex;
+        justify-content: space-between;
+      }
+      .shopping-item-ticketPrice{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .shopping-item-date{
+        display: flex;
+        justify-content: space-between;
+      }
+      .progressBar-value{
+        background: var(--yellow);
+      }
+      .progressBar{
+        .p3__text{
+          color: var(--db-1);
+        }
+      }
+    }
+    &-calc{
+      @include tabletL{
+        max-width: 230px;
+      }
+      @include tablet{
+        width: 100%;
+        margin-top: 20px;
+      }
+      .calc-body{
+        display: flex;
+        margin-bottom: 10px;
+        .calc-btn{
+          position: relative;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          z-index: 5;
+          transition: 0.35s;
+          cursor: pointer;
+          min-width: 60px;
+          min-height: 60px;
+          .btn-fon{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+          &:hover{
+            background-image: linear-gradient(90deg, #40A0FF -3.75%, #AD02C0 101.03%);
+          }
+        }
+        .calc-items{
+          height: 60px;
+          width: 160px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px;
+          background: var(--blue-2);
+          border-radius: 5px;
+          @include tablet{
+            width: 100%;
+          }
+        }
+      }
+      .calc-result{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background: var(--blue-2);
+        border-radius: 5px;
+      }
+    }
+  }
+}
